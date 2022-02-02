@@ -2,11 +2,23 @@
 // Первоначальный массив можно ввести с клавиатуры, либо сгенерировать случайным образом. 
 //При решении не рекомендуется пользоваться коллекциями, лучше обойтись исключительно массивами.
 
-int [] array = new int [20];
+int [] Array = new int [20];
 
-for (int i = 0; i < array.Length; i++)
+for (int i = 0; i < Array.Length; i++)
 {
-    array[i] = new Random().Next(1, 50); 
-    Console.Write($"{array[i]} ");
+    Array[i] = new Random().Next(1, 50); 
+    Console.Write($"{Array[i]} ");
 }
 Console.WriteLine();
+
+void FormatedArray(int[]array)
+{
+    for (int count = 0; count < array.Length; count++)
+    {
+        if (array[count] %2 == 0)
+        {
+            Console.Write($"{array[count]} ");
+        }
+    }
+}
+FormatedArray(Array);
