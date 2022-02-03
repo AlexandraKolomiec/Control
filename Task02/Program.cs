@@ -11,14 +11,19 @@ for (int i = 0; i < Array.Length; i++)
 }
 Console.WriteLine();
 
-void FormatedArray(int[]array)
+int[] GenerateNewArray(int[]Array)
 {
-    for (int count = 0; count < array.Length; count++)
+    int [] ResultArray = new int[Array(i)];
+    int j = 0;
+    for( int i = 0; i < Array.Length; i++)
     {
-        if (array[count] %2 == 0)
+        if (Array [i] %2 == 0)
         {
-            Console.Write($"{array[count]} ");
+            ResultArray[j] = Array[i];
+            j++;
         }
+        return ResultArray;
     }
 }
-FormatedArray(Array);
+int[] ResultArray = GenerateNewArray(Array);
+Console.Write($"{ResultArray[j]} ");
